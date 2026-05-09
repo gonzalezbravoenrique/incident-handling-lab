@@ -13,24 +13,51 @@ Analizar el escenario y completar las acciones a realizar en cada fase del manej
 - La compañía de inversiones ha contratado a un pequeño grupo de expertos en seguridad que suelen utilizar el modelo diamante para el manejo de incidentes de seguridad.  
 
 ### Fase Preparación
-¿Tienen un equipo CSIRT definido con roles definidos y responsabilidades asignadas?  
-¿Tienen un canal de comunicación propio?  
-¿Quienes son los contactos clave?  
-¿Se han coordinado con las autoridades?  
-¿Qué sistemas de detección usan?  
-¿Tienen un plan de respuesta ante incidentes?  
-¿Están definidos los procedimientos a seguir ante un incidente?  
-¿Existe una guía de actuación?  
-¿Los empleados están concienciados? ¿Se han hecho formaciones?  
-¿Se han realizado simulacros?  
-¿El CSIRT está formado y entrenado?  
+¿Tienen un equipo CSIRT definido con roles definidos y responsabilidades asignadas? Sí  
+¿Tienen un canal de comunicación propio? Se desconoce.  
+¿Quienes son los contactos clave? Se desconoce.  
+¿Se han coordinado con las autoridades? No.  
+¿Qué sistemas de detección usan? Antivirus.  
+¿Tienen un plan de respuesta ante incidentes? Parece que no a tenor que habían sufrido otros incidentes anteriormente.  
+¿Están definidos los procedimientos a seguir ante un incidente? No  
+¿Existe una guía de actuación? Se desconoce.  
+¿Los empleados están concienciados? ¿Se han hecho formaciones? Parece que no a tenor que habían sufrido otros incidentes anteriormente.   
+¿Se han realizado simulacros? Se desconoce.  
+¿El CSIRT está formado y entrenado? Parece que sí, pues son expertos y utilizan el modelo diamante, pero en esta ocasión no lo pusieron en práctica.  
 
 
 ### Fase Detección y análisis
+¿Qué alerta/s saltaron en el SIEM? Se desconoce.  
+¿Cuál es el vector del ataque? Medios extraíbles y recursos compartidos.
+¿Se revisaron los logs? Se desconoce.  
+¿Hubo alguna señal precursora antes del incidente? Infecciones masivas anteriores.  
+¿Se analizó el incidente? Sí.  
+¿A que sistemas afectan? ¿Cuál es el alcance? Recursos compartidos, se instala en host y se replica mediante agente DDoS.   
+¿Qué gravedad tiene? Muy grave.  
+¿Se ha notificado a todos los equipos implicados (responsables, equipo interno, stakeholders? Parece que no.  
+
 
 ### Fase Contención, erradicación y recuperación
+¿Se aislaron los equipos implicados? Se desconoce.  
+¿Se bloquearon los accesos? Se desconoce.  
+¿Se cortaron las conexiones/comunicaciones? Se desconoce.  
+¿Se pudo eliminar el malware? Sí.  
+¿Se pudo aplicar algún tipo de parche? Sí, horas más tarde.  
+¿Se corrigió la vulnearabidad? Sí.   
+¿Se pudo restaurar el sistema?  
+¿Tenían backups? ¿Se pudieron recuperar los datos? Se desconoce.  
+¿Funciona todo con normalidad tras la recuperación? Se desconoce.
 
 ### Fase Actividad posterior al incidente
+¿Cómo entraron? Medio extraíble  
+¿Qué falló? Antivurs.
+¿Qué sistemas afectó? Varios hosts.  
+¿Fue rápida la respuesta del CSIRT? Se desconoce.
+¿El CSIRT estuvo coordinado? Se desconoce.  
+¿Se siguieron los procedimientos? Se desconoce.  
+¿Los procedimientos fueron adecuados y suficientes?¿Se pueden mejorar? Sí  
+¿Funcionaron los controles de seguridad? No  
+¿Qué se debe reforzar? Accesos, Permisos y Antivirus.
 
 ===============
 
@@ -38,7 +65,7 @@ Analizar el escenario y completar las acciones a realizar en cada fase del manej
 
 - Este escenario se trata de un hospital de mediana magnitud con varios consultorios y servicios médicos externos.
 - La organización tiene decenas de sedes y más de 5000 empleados.
-- Debido al tamaño de la organización, han adoptado un modelo CISRC con equipos distribuidos de respuesta ante incidentes. También tienen un equipo de coordinación que controla a los CSIRT y les ayuda a comunicarse entre sí.
+- Debido al tamaño de la organización, han adoptado un modelo CSIRT con equipos distribuidos de respuesta ante incidentes. También tienen un equipo de coordinación que controla a los CSIRT y les ayuda a comunicarse entre sí.
 - Son las últimas horas de la tarde de un miércoles, el equipo de seguridad física de la organización recibe una llamada de una administradora de nómina que vio salir de su oficina a un desconocido, correr por el pasillo y salir del edificio.
 - La administradora se había alejado de su estación de trabajo solo durante unos pocos minutos y la había dejado desbloqueada.
 - El programa de nóminas sigue con la sesión abierta y en el menú principal, tal como ella lo había dejado, pero cree que han movido el mouse.
@@ -47,9 +74,48 @@ Analizar el escenario y completar las acciones a realizar en cada fase del manej
 - A modo de nivel de protección adicional, han tercerizado parcialmente el personal a una MSSP para tener monitoreo las 24 horas del día, los 7 días de la semana.
 
 ### Fase Preparación
+¿Tienen un equipo CSIRT definido con roles definidos y responsabilidades asignadas? Sí  
+¿Tienen un canal de comunicación propio? Sí.  
+¿Quienes son los contactos clave? Se desconoce.  
+¿Se han coordinado con las autoridades? Sí a través del equipo de coordinación.  
+¿Qué sistemas de detección usan? Se desconoce.   
+¿Tienen un plan de respuesta ante incidentes? Sí.  
+¿Están definidos los procedimientos a seguir ante un incidente? Se desconoce.  
+¿Existe una guía de actuación? Se desconoce.  
+¿Los empleados están concienciados? ¿Se han hecho formaciones? Según lo ocurrido no, pues la administradora se dejó la sesión abierta, y además un extraño pudo acceder al edificio.  
+¿Se han realizado simulacros? Se desconoce.  
+¿El CSIRT está formado y entrenado? Sí.  
+
 
 ### Fase Detección y análisis
+¿Qué alerta/s saltaron en el SIEM? Ninguna. Fue robo de información física.  
+¿Cuál es el vector del ataque? Error humano.
+¿Se revisaron los logs? Se desconoce.  
+¿Hubo alguna señal precursora antes del incidente? Ninguna  
+¿Se analizó el incidente? Sí.  
+¿A que sistemas afectan? ¿Cuál es el alcance? Software de nóminas.  
+¿Qué gravedad tiene? Muy grave, pues se habrían exfiltrado datos personales confidenciales.  
+¿Se ha notificado a todos los equipos implicados (responsables, equipo interno, stakeholders? Sí.  
+
 
 ### Fase Contención, erradicación y recuperación
+¿Se aislaron los equipos implicados? Se desconoce.  
+¿Se bloquearon los accesos? No.  
+¿Se cortaron las conexiones/comunicaciones? No.  
+¿Se pudo eliminar el malware? No aplica.  
+¿Se pudo aplicar algún tipo de parche? No aplica. 
+¿Se corrigió la vulnearabidad? No aplica.   
+¿Se pudo restaurar el sistema? No aplica.  
+¿Tenían backups? ¿Se pudieron recuperar los datos? No aplica.  
+¿Funciona todo con normalidad tras la recuperación? Parece que sí.
 
 ### Fase Actividad posterior al incidente
+¿Cómo entraron? Acceso físico.  
+¿Qué falló? Error humano con sesión abierta.
+¿Qué sistemas afectó? Nóminas.  
+¿Fue rápida la respuesta del CSIRT? Se desconoce.
+¿El CSIRT estuvo coordinado? Sí  
+¿Se siguieron los procedimientos? Se desconoce.  
+¿Los procedimientos fueron adecuados y suficientes?¿Se pueden mejorar?  
+¿Funcionaron los controles de seguridad? No.  
+¿Qué se debe reforzar? Control de acceso.
